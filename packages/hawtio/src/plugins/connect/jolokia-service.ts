@@ -100,6 +100,10 @@ class JolokiaService implements IJolokiaService {
     })
   }
 
+  async getJolokia(): Promise<IJolokia> {
+    return await this.jolokia;
+  }
+
   private async initJolokiaUrl(): Promise<string | null> {
     // Check remote connection
     const conn = connectService.getCurrentConnection()
